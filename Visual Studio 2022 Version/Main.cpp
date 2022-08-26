@@ -1,5 +1,4 @@
 #define SDL_MAIN_HANDLED
-#define _CRTDBG_MAP_ALLOC
 #include "Event.h"
 #include "Time.h"
 #include <thread>
@@ -425,6 +424,5 @@ int main(int argc, char** argv) {
     }
     delete ev;
     delete time;
-    _CrtDumpMemoryLeaks();
     return 0;
 }
