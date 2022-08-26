@@ -1168,7 +1168,6 @@ void Game::Get_Question() {
     if (counter < 15) {
         Get_RandomQuestion();
         Render_InGame();
-        std::cout << counter << std::endl;
     }
 }
 
@@ -1179,7 +1178,6 @@ void Game::Get_RandomQuestion() {
     } while (AlreadyUsed());
     used.push_back(q);
     l = Get_Line();
-    std::cout << l << std::endl;
 }
 
 bool Game::AlreadyUsed() {
@@ -1224,5 +1222,4 @@ void Game::Set_FixMoney() {
     if (counter % 5 == 0) {
         fixMoney++;
     }
-    std::cout << "FixMoney: " << fixMoney << std::endl;
 }
