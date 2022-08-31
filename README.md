@@ -8,4 +8,7 @@ https://user-images.githubusercontent.com/60004480/187656479-72b1472f-b9c5-412f-
 
 This game was created in c++ made with Simple DirectMedia Layer (SDL).
 
+The program contains more than 5,000 questions in English, German and Hungarian.
+
+In conclusion the game has a full version of English, German and Hungarian.
 
