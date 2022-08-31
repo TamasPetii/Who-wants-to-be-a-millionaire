@@ -65,7 +65,7 @@ Available game font types:
 - Minecraft
 - IndieFlower Regular
 
-Music Volume (0 - 10)
+Music Volume (0 - 10) <br>
 Chunk Volume (0 - 10)
 
 # About the Game Sound
