@@ -67,18 +67,18 @@ At the right side you can find the values you can win.
 ![kép](https://user-images.githubusercontent.com/60004480/187668807-0f2922fd-eb03-47e5-9e7f-a71fb15ceed6.png)
 
 Available game languages: 
-- English
-- German
-- Hungarian
-- You can set the language while being on any of the displays. After you set it every text will be displayed according to the language.
+- `English`
+- `German`
+- `Hungarian`
+- You can set the language while being on `any of the displays`. After you set it every text will be displayed according to the language.
 
 Available game font types:
-- Times New Roman
-- Minecraft
-- IndieFlower Regular
+- `Times New Roman`
+- `Minecraft`
+- `IndieFlower Regular`
 
-Music Volume (0 - 10) <br>
-Chunk Volume (0 - 10)
+Music Volume `(0 - 10)` <br>
+Chunk Volume `(0 - 10)`
 
 # About the Game Sound
 The full sound track: https://www.youtube.com/watch?v=MForOVuA6hs <br>
