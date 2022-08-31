@@ -12,3 +12,9 @@ The program contains more than 5,000 questions in English, German and Hungarian.
 
 In conclusion the game has a full version of English, German and Hungarian.
 
+# About the Game Sound
+The full sound track: https://www.youtube.com/watch?v=MForOVuA6hs <br>
+Click sound: https://www.youtube.com/watch?v=h6_8SlZZwvQ <br>
+Hover sound: https://www.youtube.com/watch?v=caezQznghGE <br>
+
+
