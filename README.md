@@ -65,6 +65,9 @@ Available game font types:
 - Minecraft
 - IndieFlower Regular
 
+Music Volume (0 - 10)
+Chunk Volume (0 - 10)
+
 # About the Game Sound
 The full sound track: https://www.youtube.com/watch?v=MForOVuA6hs <br>
 Click sound: https://www.youtube.com/watch?v=h6_8SlZZwvQ <br>
