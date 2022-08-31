@@ -52,14 +52,14 @@ On the Results display you can check the game results of a given player.
 ![kép](https://user-images.githubusercontent.com/60004480/187667306-c8592872-bab9-4b2b-94c9-247220e0d907.png)
 
 At the left side you can find the helps.
-- 50 / 50 -> This help deletes 2 answers
-- Phone -> You have 30 seconds to "phone" a friend
-- Ask the Audience -> The audience votes and you can decide to belive them or not.
+- `50 / 50` -> This help deletes 2 answers
+- `Phone` -> You have 30 seconds to "phone" a friend
+- `Ask the Audience` -> The audience votes and you can decide to belive them or not.
 
 At the right side you can find the values you can win.
-- The current winnable prize is marked as yellow.
-- The completed prizes are marked as green.
-- Language is hungarian the prizes are in HUF, otherwise they are in DOLLAR
+- The **current winnable prize** is marked as `yellow`.
+- The **completed prizes** are marked as `green`.
+- Language is **hungarian** the prizes are in `HUF`, otherwise they are in `DOLLAR`
 
 # Option display
 
