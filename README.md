@@ -80,7 +80,7 @@ Available game font types:
 Music Volume `(0 - 10)` <br>
 Chunk Volume `(0 - 10)`
 
-# About the Game Sound
+# About the Game Sounds
 The full sound track: https://www.youtube.com/watch?v=MForOVuA6hs <br>
 Click sound: https://www.youtube.com/watch?v=h6_8SlZZwvQ <br>
 Hover sound: https://www.youtube.com/watch?v=caezQznghGE <br>
