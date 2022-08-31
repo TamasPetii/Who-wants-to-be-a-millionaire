@@ -2,7 +2,7 @@
 
 https://user-images.githubusercontent.com/60004480/187656479-72b1472f-b9c5-412f-8721-4895dce74ada.mp4
 
-(**Refress page if you have problem with the video**)
+(**Refresh page if you have problem with the video**)
 
 # About the Game
 
@@ -55,6 +55,15 @@ On the Results display you can check the game results of a given player.
 
 ![kép](https://user-images.githubusercontent.com/60004480/187668807-0f2922fd-eb03-47e5-9e7f-a71fb15ceed6.png)
 
+Available game languages: 
+- English
+- German
+- Hungarian
+
+Available game font types:
+- Times New Roman
+- Minecraft
+- IndieFlower Regular
 
 # About the Game Sound
 The full sound track: https://www.youtube.com/watch?v=MForOVuA6hs <br>
