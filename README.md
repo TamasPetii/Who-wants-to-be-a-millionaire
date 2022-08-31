@@ -55,6 +55,7 @@ At the left side you can find the helps.
 - `50 / 50` -> This help deletes 2 answers
 - `Phone` -> You have 30 seconds to "phone" a friend
 - `Ask the Audience` -> The audience votes and you can decide to belive them or not.
+- The used helps are rendered with a red X and they are unavailable.
 
 At the right side you can find the values you can win.
 - The **current winnable prize** is marked as `yellow`.
@@ -69,6 +70,7 @@ Available game languages:
 - English
 - German
 - Hungarian
+- You can set the language while being on any of the displays. After you set it every text will be displayed according to the language.
 
 Available game font types:
 - Times New Roman
