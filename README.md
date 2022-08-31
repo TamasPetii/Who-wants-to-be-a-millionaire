@@ -17,6 +17,7 @@ In conclusion the game has a full version of English, German and Hungarian.
 - The game was designed for `hungarian` play. 
 - The original questions are hungarian so the `english and german versions are translared` with google translater -> There can be a LOT OF anomaly.
 - There is `no memory leak` according to the CrtDumpMemoryLeaks().
+- The **"Windows.h"** include was used in the program -> Game `can be run only on WINDOWS`.
 
 # Start Display
 
