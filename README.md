@@ -25,9 +25,9 @@ On the start display there are 3 buttons. <br>
 
 ![kép](https://user-images.githubusercontent.com/60004480/187661297-a085d424-c0fe-41cf-87e6-1423b8fc3c79.png)
 
-On this display you can check the top 10 player by the different game modes. <br>
-After you played a game your game state will **saved in a file**. <br>
-If you did well you will be shown on the leaderboards. <br>
+- On this display you can check the top 10 player by the different game modes. <br>
+- After you played a game your game state will **saved in a file**. <br>
+- If you did well you will be shown on the leaderboards. <br>
 
 # Results display
 
@@ -38,9 +38,23 @@ On the Results display you can check the game results of a given player.
 - For capital letter use the `CAPS LOCK` key.
 - After you typed a name click on the `green check mark`, and **all the results will be shown**.
 
+# Select display
+
+![kép](https://user-images.githubusercontent.com/60004480/187666659-ba9023bd-b9f6-4bac-9b9b-03d286933b2c.png)
+
+- You must choose a `game mode` and a `name`. <br>
+- If you didn't choose any of them you **can't start the game**. <br>
+- The chosen game mode will be green. <br>
+- After you click on start game button the INGAME button will be displayed.
+
+# InGame display
+
+![kép](https://user-images.githubusercontent.com/60004480/187667306-c8592872-bab9-4b2b-94c9-247220e0d907.png)
+
+
 # About the Game Sound
 The full sound track: https://www.youtube.com/watch?v=MForOVuA6hs <br>
 Click sound: https://www.youtube.com/watch?v=h6_8SlZZwvQ <br>
 Hover sound: https://www.youtube.com/watch?v=caezQznghGE <br>
-
+Error sound: 
 
