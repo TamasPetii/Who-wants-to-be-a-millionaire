@@ -3,10 +3,8 @@
 //-----------------------------------------Init-----------------------------------------//
 
 /*
-# What it does?
-- This function is the constructor.
-- It inits the necessary SDL data members (window, render, etc..)
-- Furthermore, it inits the image, color, and prize data members.
+This function is the constructor, it inits all the necessary data members. 
+Including SDL window, SDL render, pictures, textures, images, colors...
 */
 Game::Game() {
     SDL_Init(SDL_INIT_EVERYTHING);
@@ -32,7 +30,6 @@ Game::Game() {
 }
 
 /*
-# What it does?
 - This function is the destructor.
 - It clears all the data members of the class in order to avoid memory leak.
 */
@@ -53,8 +50,7 @@ Game::~Game() {
 }
 
 /*
-# What it does?
-- This function saves all the objects positions from texture.png
+- This function containes all the positions of the objects from texture.png
 */
 void Game::Init_Images() {
     images["BR"] = { 542,1768,457,139 };
@@ -94,8 +90,7 @@ void Game::Init_Images() {
 }
 
 /*
-# What it does?
-- This function inits the colors.
+- This function inits colors.
 */
 void Game::Init_Colors() {
     colors[WHITE] = { 255,255,255,255 };
@@ -105,7 +100,6 @@ void Game::Init_Colors() {
 }
 
 /*
-# What it does?
 - This function reads and process the hungarian, english and german questions.
 */
 void Game::Init_Questions() {
@@ -118,8 +112,7 @@ void Game::Init_Questions() {
 }
 
 /*
-# What it does?
-- This function inits the prize.
+- This function inits the prizes, including the prize of the normal, medium, hard game mode.
 */
 void Game::Init_Prize() {
     prize[HUN] = Get_Prize(HUN);
@@ -127,6 +120,9 @@ void Game::Init_Prize() {
     prize[GER] = Get_Prize(GER);
 }
 
+/*
+This function declares the different laguage and mode prizes.
+*/
 Pr Game::Get_Prize(Language lan) {
     if (lan == HUN) {
         return {
@@ -175,6 +171,9 @@ Qs Game::Read(Language lan) {
     return { normal, medium, hard };
 }
 
+/*
+This function opens the Results.txt file and adds the current player game state to the file.
+*/
 void Game::WriteResults() {
     std::string filename("./results/Results.txt");
     std::ofstream f;
@@ -239,6 +238,9 @@ void Game::Render_Texts() {
     }
 }
 
+/*
+This function resets all the necessary data members for other round
+*/
 void Game::Reset() {
     used.clear();
     l = {};
@@ -456,6 +458,11 @@ void Game::Render_Helps() {
     SDL_RenderCopy(render, picture, &(helps.help3 ? images["HELP3"] : images["HELP3_X"]), &to);
 }
 
+/*
+This function renders a button with or without text on the INGAME display.
+x defines the button -> 1 = A answer | 2 = B answer | 3 = c answer | 4 = D answer | 5 = Question
+c defines the color of the button.
+*/
 void Game::Render_InGameButton(int x, Colors c) {
     if(c == WHITE || c == PURPLE) throw GAME_EXCEPTION("Wrong InGame Button Color!");
     if(q == -1) throw GAME_EXCEPTION("Couldn't find the question!");
@@ -527,6 +534,9 @@ void Game::Render_InGameButtons() {
     Render_InGameButton(4, BLUE);
 }
 
+/*
+After you click on the bag icon this function is going to render the current winnable prize.
+*/
 void Game::Render_CashOut() {
     SDL_SetRenderDrawColor(render, 19, 16, 43, 255);
     to = { 250,25,500,500 };
@@ -563,6 +573,9 @@ void Game::Render_CashOut() {
     Render_Present();
 }
 
+/*
+After you lost a game or answered all the 15 questions this function will render the money that you won.
+*/
 void Game::Render_FixCashOut() {
     SDL_SetRenderDrawColor(render, 19, 16, 43, 255);
     to = { 250,25,500,500 };
@@ -588,6 +601,9 @@ void Game::Render_FixCashOut() {
     Render_Present();
 }
 
+/*
+This function renders the whole INGAME display
+*/
 void Game::Render_InGame() {
     Render_Background();
     Render_OptionImage();
@@ -953,6 +969,10 @@ void Game::Start_Help3() {
 
 //-----------------------------Leaderboard-------------------------------//
 
+/*
+This function renders the background of the LeaderBoard display (The rects).
+x defines the column : x = 1 -> First column | x = 2 -> Second column | x = 3 -> Third column
+*/
 void Game::Render_LB_BG(int x) {
     for (int i = 0; i < 10; i++) {
         to = { 25 + x * 325, 225 + i * 55, 300, 50 };
@@ -975,6 +995,9 @@ void Game::Render_LB_BG(int x) {
     }
 }
 
+/*
+This function renders the texts on the LeaderBoard Display.
+*/
 void Game::Render_LB_HelpTexts() {
     text->Render_Text_Centered(language == HUN ? "(NEV | JO VALASZOK | IDO)" : language == ENG ? "(NAME, GOOD ANSWERS, TIME)" : "(NAME, GUTE ANTWORTEN, ZEIT)", fontType, 35, colors[WHITE], 500, 75);
     text->Render_Text_Centered("NORMAL", fontType, 35, colors[ORANGE], 175, 200);
@@ -982,17 +1005,27 @@ void Game::Render_LB_HelpTexts() {
     text->Render_Text_Centered(language == HUN ? "NEHEZ" : language == ENG ? "HARD" : "SCHWER", fontType, 35, colors[ORANGE], 825, 200);
 }
 
+/*
+This function sorts the vectors.
+*/
 void Game::Sort_Vec(std::vector<Player>& vec) {
     Sort_Players(vec, 1);
     Sort_Players(vec, 3);
 }
 
+/*
+This function swaps to element in a vector.
+*/
 void Game::Swap(Player& x, Player& y) {
     Player temp = x;
     x = y;
     y = temp;
 }
 
+/*
+This function is a maximum selection sort.
+The option defines the value according to which we will sort the vector.
+*/
 void Game::Sort_Players(std::vector<Player>& vec, int option) {
     int n = vec.size() - 1;
     for (unsigned int i = n; i >= 1; i--) {
@@ -1006,6 +1039,10 @@ void Game::Sort_Players(std::vector<Player>& vec, int option) {
     }
 }
 
+/*
+This function opens the Results.txt and process it.
+It sorts the vectors and displays the first 10 player on the LeaderBoard
+*/
 void Game::Render_LB_Players() {
     std::ifstream f("./results/Results.txt");
 
@@ -1042,6 +1079,9 @@ void Game::Render_LB_Players() {
     players_hard.clear();
 }
 
+/*
+This function displayer the first 10 player on the leaderboard
+*/
 void Game::Render_LB_PlayerText(std::vector<Player> vec, int mode) {
     int n = (vec.size() < 10 ? vec.size(): 10);
     for (int i = 0; i < n; i++) {
@@ -1051,17 +1091,26 @@ void Game::Render_LB_PlayerText(std::vector<Player> vec, int mode) {
     }
 }
 
+/*
+This function renders all the texts that can be found on the Leaderboard display
+*/
 void Game::Render_LB_Texts() {
     Render_LB_HelpTexts();
     Render_LB_Players();
 }
 
+/*
+This function renders the normal, medium, hard backgound.
+*/
 void Game::Render_LB_BackGround() {
     Render_LB_BG(0);
     Render_LB_BG(1);
     Render_LB_BG(2);
 }
 
+/*
+This function renders everything on the LeaderBoard display.
+*/
 void Game::Render_Leaderboards() {
     SDL_SetRenderDrawColor(render, 19, 16, 43, 255);
     SDL_RenderClear(render);
@@ -1074,6 +1123,9 @@ void Game::Render_Leaderboards() {
 
 //-------------------------------------Results--------------------------------------//
 
+/*
+This function renders everything on the Results display
+*/
 void Game::Render_Results() {
     SDL_SetRenderDrawColor(render, 19, 16, 43, 255);
     SDL_RenderClear(render);
@@ -1084,6 +1136,11 @@ void Game::Render_Results() {
     Render_Present();
 }
 
+/*
+This function opens the Results.txt and process it.
+It finds all the game ending according to the given player name.
+After sorting the game endings of the player it renders them as a text.
+*/
 void Game::Render_Results_Player() {
     std::ifstream f("./results/Results.txt");
 
@@ -1121,12 +1178,18 @@ void Game::Render_Results_Player() {
     players_hard.clear();
 }
 
+/*
+This function renders the background and all the texts that are on the Results display.
+*/
 void Game::Render_Results_Texts() {
     Render_LB_BackGround();
     Render_Results_HelpTexts();
     Render_Results_Player();
 }
 
+/*
+This function renders the input filed including the button, the button text and the white input field.
+*/
 void Game::Render_Results_InputField() {
     //Button with text
     to = { 350,30,300,75 };
@@ -1154,6 +1217,9 @@ void Game::Render_Results_InputField() {
     }
 }
 
+/*
+This function renders texts on the Results display
+*/
 void Game::Render_Results_HelpTexts() {
     text->Render_Text_Centered(language == HUN ? "(NEV | JO VALASZOK | IDO)" : language == ENG ? "(NAME, GOOD ANSWERS, TIME)" : "(NAME, GUTE ANTWORTEN, ZEIT)", fontType, 35, colors[WHITE], 500, 150);
     text->Render_Text_Centered("NORMAL", fontType, 35, colors[ORANGE], 175, 200);
@@ -1164,13 +1230,18 @@ void Game::Render_Results_HelpTexts() {
 
 //---------------------------Other-Helping-Methodes---------------------------//
 
+/*
+This function gives a random question and renders on the INGAME display.
+*/
 void Game::Get_Question() {
     if (counter < 15) {
         Get_RandomQuestion();
         Render_InGame();
     }
 }
-
+/*
+This function generates a random question, checks if its leagal and sets the proper data members.
+*/
 void Game::Get_RandomQuestion() {
     int to = (mode == 1 ? questions[HUN].normal.size() : mode == 2 ? questions[HUN].medium.size() : questions[HUN].hard.size());
     do {
@@ -1180,6 +1251,9 @@ void Game::Get_RandomQuestion() {
     l = Get_Line();
 }
 
+/*
+This function checks if the question is already used.
+*/
 bool Game::AlreadyUsed() {
     bool l = false;
     for (unsigned int i = 0; i < used.size() && !l; i++) {
@@ -1188,14 +1262,24 @@ bool Game::AlreadyUsed() {
     return l;
 }
 
+/*
+This function gives a random number (from - to)
+*/
 int Game::Random(int from, int to) {
     return from + rand() % (to - from);
 }
 
+/*
+This function returns the question according to the current language setting
+*/
 line Game::Get_Line() {
     return (mode == 1 ? questions[language].normal[q] : mode == 2 ? questions[language].medium[q] : questions[language].hard[q]);
 }
 
+/*
+This function find the half of the string. 
+It is used when we renders the question in order to not reach out of the button
+*/
 int Game::FindHalfOfString(std::string str) {
     int ind = 0;
     for (int i = 0; i < 60; i++) {
@@ -1206,18 +1290,31 @@ int Game::FindHalfOfString(std::string str) {
     return ind;
 }
 
+/*
+This function checks if the given question answer is equal to the question answer.
+*/
 bool Game::Answer(std::string str) {
     return str == l.answer;
 }
 
+/*
+This function returns the question answer as an integer
+(A = 1 | B = 2 | C = 3 | D = 4)
+*/
 int Game::Get_GoodAnswerNum() {
     return (l.answer == "A" ? 1 : l.answer == "B" ? 2 : l.answer == "C" ? 3 : 4);
 }
 
+/*
+This function returns the length of a text surface.
+*/
 int Game::Check_NameLength(std::string str) {
     return text->Check_Length(str, fontType, 30);
 }
 
+/*
+This function sets the fix money that a player can win.
+*/
 void Game::Set_FixMoney() {
     if (counter % 5 == 0) {
         fixMoney++;
