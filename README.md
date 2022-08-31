@@ -12,6 +12,12 @@ The program contains more than 5,000 questions in English, German and Hungarian.
 
 In conclusion the game has a full version of English, German and Hungarian.
 
+# `IMPORTANT to know before start`
+
+- The game was designed for `hungarian` play. 
+- The original questions are hungarian so the `english and german versions are translared` with google translater -> There can be a LOT OF anomaly.
+- There is `no memory leak` according to the CrtDumpMemoryLeaks().
+
 # Start Display
 
 ![kép](https://user-images.githubusercontent.com/60004480/187660290-f437689b-7ad6-41a7-8059-af8374041509.png)
