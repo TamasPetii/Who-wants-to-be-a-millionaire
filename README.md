@@ -51,6 +51,10 @@ On the Results display you can check the game results of a given player.
 
 ![kép](https://user-images.githubusercontent.com/60004480/187667306-c8592872-bab9-4b2b-94c9-247220e0d907.png)
 
+# Option display
+
+![kép](https://user-images.githubusercontent.com/60004480/187668807-0f2922fd-eb03-47e5-9e7f-a71fb15ceed6.png)
+
 
 # About the Game Sound
 The full sound track: https://www.youtube.com/watch?v=MForOVuA6hs <br>
