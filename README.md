@@ -17,9 +17,9 @@ In conclusion the game has a full version of English, German and Hungarian.
 ![kép](https://user-images.githubusercontent.com/60004480/187660290-f437689b-7ad6-41a7-8059-af8374041509.png)
 
 On the start display there are 3 buttons. <br>
-The first will load the Select display. If you want to create a new game then click on this. <br>
-The second button will load the LeaderBoard display. If you want to check the top 10 player of all time then click on this.<br>
-The third button will load the Results display. If you are curious about your results then click on this button.<br>
+- The first will load the `Select display`. If you want to create a new game then click on this. <br>
+- The second button will load the `LeaderBoard display`. If you want to check the top 10 player of all time then click on this.<br>
+- The third button will load the `Results display`. If you are curious about your results then click on this button.<br>
 
 
 # About the Game Sound
