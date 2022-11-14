@@ -70,7 +70,7 @@ Compile the project with -pthread and -std=c++17. <br>
 ## Problem
 
 ```
-If the above advice did not worked then it is likely that your version of the c++ compiler does not support threads by default. 
+If the above advice did not work then it is likely that your version of the c++ compiler does not support threads by default. 
 I used to have the same problem with this version of g++. 
 ```
 
