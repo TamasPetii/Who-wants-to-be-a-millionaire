@@ -15,7 +15,7 @@ In conclusion the game has a full version of English, German and Hungarian.
 # Important to know before start
 
 - The game was designed for `hungarian` play. 
-- The original questions are hungarian so the `english and german versions are translared` with google translater -> There can be a LOT OF anomaly.
+- The original questions are hungarian so the `english and german versions are translated` with google translater -> There can be a LOT OF anomaly.
 - There is `no memory leak` according to the CrtDumpMemoryLeaks().
 - The **"Windows.h"** include was used in the program -> Game `can be run only on WINDOWS`.
 
@@ -62,14 +62,14 @@ In conclusion the game has a full version of English, German and Hungarian.
 ![image](https://user-images.githubusercontent.com/60004480/201669180-c6f7f548-552f-4216-bb55-50e6c02f2245.png)
 
 ## Try this first
-
-Compile the project with `-pthread` and `-std=c++17`. <br>
-
+```
+Compile the project with -pthread and -std=c++17. <br>
+```
 ## Problem
 
 ```
-It is likely that your version of the **c++ compiler does not support threads** by default. <br>
-I used to have the same problem with this version of g++. <br>
+If the above advice did not worked then it is likely that your version of the c++ compiler does not support threads by default. 
+I used to have the same problem with this version of g++. 
 ```
 
 ![image](https://user-images.githubusercontent.com/60004480/201670167-c9e3fc38-14da-46a4-afdd-918547f45503.png)
@@ -77,9 +77,11 @@ I used to have the same problem with this version of g++. <br>
 ## Solution
 
 ```
-The solution was to download another g++ compiler with the posix version. <br>
+The solution was to download another g++ compiler with the posix version.
 I downloaded the `prebuild MinGW-w64 x86 posix` version and everything works fine with it.
 (With this version you don't need to use the -pthread and -std=c++17 operators.)
+
+https://www.mingw-w64.org/downloads/#mingw-builds
 ```
 
 ![image](https://user-images.githubusercontent.com/60004480/201671907-66c4ac2d-74fe-4136-b632-28e1f6a5ed8f.png)
