@@ -12,12 +12,77 @@ The program contains more than 5,000 questions in English, German and Hungarian.
 
 In conclusion the game has a full version of English, German and Hungarian.
 
-# `IMPORTANT to know before start`
+# Important to know before start
 
 - The game was designed for `hungarian` play. 
 - The original questions are hungarian so the `english and german versions are translared` with google translater -> There can be a LOT OF anomaly.
 - There is `no memory leak` according to the CrtDumpMemoryLeaks().
 - The **"Windows.h"** include was used in the program -> Game `can be run only on WINDOWS`.
+
+# How to compile and run the project form TERMINAL
+1. Download the `Only Source Files` project form my github.
+2. Extract the project and open the `Only Source Files` directory (You should be where the .cpp files are) then create a new directory named as src
+3. In the src directory create two new directories named as include and lib
+4. Download SDL, SDL_image, SDL_mixer, SDL_ttf libraries. <br>
+
+<div align="center">
+
+| SDL libraries  | Description |
+| :----------- | :----------- |
+| SDL         | https://www.libsdl.org/release/SDL2-devel-2.0.22-VC.zip       |
+| SDL_image   | https://www.libsdl.org/projects/SDL_image/release/SDL2_image-devel-2.6.2-VC.zip      |
+| SDL_mixer   | https://www.libsdl.org/projects/SDL_mixer/release/SDL2_mixer-devel-2.6.2-VC.zip        |
+| SDL_ttf     | https://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-devel-2.20.1-VC.zip        |
+
+</div>
+
+5. Extract the downloaded libraries. Every library will contain an include and lib directories.
+6. From the SDL include directories move all the .h files to our project's src/include directory.
+7. From the SDL x86/lib directories move all the .lib files to our project's src/lib directiory.
+8. From the SDL x86/lib directories move the `SDL2.dll | SDL2_image.dll | SDL2_mixer.dll | SDL2_ttf.dll` libraries to our project's directiory. (These files should be where the .cpp and .h files are.)
+9. At this point you should see this.
+
+<div align="center">
+
+| Main Directory  | Src Directory  | Include Directory   | Lib Directory  |
+| :----------- | :----------- | :----------- | :----------- |
+| ![image](https://user-images.githubusercontent.com/60004480/201665505-dd66f3e2-1c8e-4312-9469-6cfff5bcbeb1.png)        | ![image](https://user-images.githubusercontent.com/60004480/201665902-51259978-84eb-4d12-ab7a-d88ea5ebd3e4.png)      | ![image](https://user-images.githubusercontent.com/60004480/201665829-4d58dcec-15f0-4164-83ce-b612329bc374.png) | ![image](https://user-images.githubusercontent.com/60004480/201665782-eed52d14-8d5a-4ae9-938f-5062bb6d5d6f.png) |
+
+</div>
+
+10. Open a terminal in the directory and compile the files with this command: <br>
+`g++ -Isrc/include -Lsrc/lib *.cpp -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf -Wall -Wextra`
+
+11. Run the a.exe file and you are ready to go.
+
+# Problem with Threads while compiling the project.
+
+`At the 10. step you might get an error like this.`
+
+![image](https://user-images.githubusercontent.com/60004480/201669180-c6f7f548-552f-4216-bb55-50e6c02f2245.png)
+
+## Try this first
+
+Compile the project with `-pthread` and `-std=c++17`. <br>
+
+## Problem
+
+```
+It is likely that your version of the **c++ compiler does not support threads** by default. <br>
+I used to have the same problem with this version of g++. <br>
+```
+
+![image](https://user-images.githubusercontent.com/60004480/201670167-c9e3fc38-14da-46a4-afdd-918547f45503.png)
+
+## Solution
+
+```
+The solution was to download another g++ compiler with the posix version. <br>
+I downloaded the `prebuild MinGW-w64 x86 posix` version and everything works fine with it.
+(With this version you don't need to use the -pthread and -std=c++17 operators.)
+```
+
+![image](https://user-images.githubusercontent.com/60004480/201671907-66c4ac2d-74fe-4136-b632-28e1f6a5ed8f.png)
 
 # Start Display
 
