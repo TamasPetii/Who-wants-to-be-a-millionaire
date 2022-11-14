@@ -113,7 +113,11 @@ https://www.mingw-w64.org/downloads/#mingw-builds
 
 | SDL2 Directory  | Bin Directory  | Include Directory   | Lib Directory  |
 | :----------- | :----------- | :----------- | :----------- |
-| ![image](https://user-images.githubusercontent.com/60004480/201678187-71700633-50b2-48da-945b-4dcea1da44f9.png)       | ![image](https://user-images.githubusercontent.com/60004480/201678616-d4a154c0-0785-471c-89c4-acf322d47cfe.png)      | !![image](https://user-images.githubusercontent.com/60004480/201678474-46e1a902-4c3a-4f1c-8f60-de6102b231aa.png) | ![image](https://user-images.githubusercontent.com/60004480/201678503-d0fdf704-627f-48fb-b187-2cbab45158da.png) |
+| ![image](https://user-images.githubusercontent.com/60004480/201678187-71700633-50b2-48da-945b-4dcea1da44f9.png)       | ![image](https://user-images.githubusercontent.com/60004480/201679014-a5d311d9-c9b1-4a82-b097-4ceecf789f8d.png)      | ![image](https://user-images.githubusercontent.com/60004480/201679046-7bbddc3c-f4be-49f3-9249-32e7478151d4.png) | ![image](https://user-images.githubusercontent.com/60004480/201678503-d0fdf704-627f-48fb-b187-2cbab45158da.png) |
+
+8. Open a terminal and create a virutal disk using this command: <br>
+   `subst T: C:\`
+9. Open the Visual Studio 2022 project and you are ready to go.
 
 # Start Display
 
