@@ -90,6 +90,8 @@ https://www.mingw-w64.org/downloads/#mingw-builds
 
 # How to run Project from Visual Studio 2022
 
+0. Download Visual Studio 2022 and set up for c++. <br> 
+   VS2022 c++ `does contain thread` by default so probably you won't get a thread error like the above
 1. Download the `Visual Studio 2022 Version` from my Github
 2. Create an directory named as SDL2 recommended in C:\
 3. Create an `include`, `lib`, `bin` direcory inside of the SDL2 directory.
