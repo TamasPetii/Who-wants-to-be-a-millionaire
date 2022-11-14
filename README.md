@@ -90,7 +90,30 @@ https://www.mingw-w64.org/downloads/#mingw-builds
 
 # How to run Project from Visual Studio 2022
 
+1. Download the `Visual Studio 2022 Version` from my Github
+2. Create an directory named as SDL2 recommended in C:\
+3. Create an `include`, `lib`, `bin` direcory inside of the SDL2 directory.
+3. Download SDL, SDL_image, SDL_mixer, SDL_ttf libraries. <br>
 
+<div align="center">
+
+| SDL libraries  | Description |
+| :----------- | :----------- |
+| SDL         | https://www.libsdl.org/release/SDL2-devel-2.0.22-VC.zip       |
+| SDL_image   | https://www.libsdl.org/projects/SDL_image/release/SDL2_image-devel-2.6.2-VC.zip      |
+| SDL_mixer   | https://www.libsdl.org/projects/SDL_mixer/release/SDL2_mixer-devel-2.6.2-VC.zip        |
+| SDL_ttf     | https://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-devel-2.20.1-VC.zip        |
+
+</div>
+
+4. Extract the downloaded libraries and move all their .h files from include directory to our SDL2\include directory. (C:\SDL2\include)
+5. Move all their .lib files from lib\x64 to our SDL2\lib directory. (C:\SDL2\lib)
+6. Move all their .dll files from lib\x64 to our SDL2\bin directory. (C:\SDL2\bin)
+7. At this point you should see this.
+
+| SDL2 Directory  | Bin Directory  | Include Directory   | Lib Directory  |
+| :----------- | :----------- | :----------- | :----------- |
+| ![image](https://user-images.githubusercontent.com/60004480/201678187-71700633-50b2-48da-945b-4dcea1da44f9.png)       | ![image](https://user-images.githubusercontent.com/60004480/201678616-d4a154c0-0785-471c-89c4-acf322d47cfe.png)      | !![image](https://user-images.githubusercontent.com/60004480/201678474-46e1a902-4c3a-4f1c-8f60-de6102b231aa.png) | ![image](https://user-images.githubusercontent.com/60004480/201678503-d0fdf704-627f-48fb-b187-2cbab45158da.png) |
 
 # Start Display
 
