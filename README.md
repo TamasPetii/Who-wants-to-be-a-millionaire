@@ -38,8 +38,8 @@ In conclusion the game has a full version of English, German and Hungarian.
 
 5. Extract the downloaded libraries. Every library will contain an include and lib directories.
 6. From the SDL include directories move all the .h files to our project's src/include directory.
-7. From the SDL x86/lib directories move all the .lib files to our project's src/lib directiory.
-8. From the SDL x86/lib directories move the `SDL2.dll | SDL2_image.dll | SDL2_mixer.dll | SDL2_ttf.dll` libraries to our project's directiory. (These files should be where the .cpp and .h files are.)
+7. From the SDL x64/lib directories move all the .lib files to our project's src/lib directiory.
+8. From the SDL x64/lib directories move the `SDL2.dll | SDL2_image.dll | SDL2_mixer.dll | SDL2_ttf.dll` libraries to our project's directiory. (These files should be where the .cpp and .h files are.)
 9. At this point you should see this.
 
 <div align="center">
@@ -62,9 +62,11 @@ In conclusion the game has a full version of English, German and Hungarian.
 ![image](https://user-images.githubusercontent.com/60004480/201669180-c6f7f548-552f-4216-bb55-50e6c02f2245.png)
 
 ## Try this first
+
 ```
 Compile the project with -pthread and -std=c++17. <br>
 ```
+
 ## Problem
 
 ```
@@ -85,6 +87,10 @@ https://www.mingw-w64.org/downloads/#mingw-builds
 ```
 
 ![image](https://user-images.githubusercontent.com/60004480/201671907-66c4ac2d-74fe-4136-b632-28e1f6a5ed8f.png)
+
+# How to run Project from Visual Studio 2022
+
+
 
 # Start Display
 
